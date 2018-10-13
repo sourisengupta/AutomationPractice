@@ -18,7 +18,7 @@ import com.test.automationpractice.uiActions.ShoppinngCartSummary;
 public class TC004_OrderAnItem extends TestBase{
 	
 	public static final Logger log=Logger.getLogger(TC004_OrderAnItem.class.getName());
-	
+	String url="http://automationpractice.com";
 	HomePage homepage;
 	PLPTShirt tshirtpage;
 	ShoppinngCartSummary scspage;
@@ -26,7 +26,7 @@ public class TC004_OrderAnItem extends TestBase{
 	
 	@BeforeTest
 	public void setUp() {
-		init();
+		init(url);
 	}
 	
 	@Test

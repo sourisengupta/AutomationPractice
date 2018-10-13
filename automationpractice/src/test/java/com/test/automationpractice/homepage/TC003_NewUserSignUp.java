@@ -15,13 +15,13 @@ import com.test.automationpractice.uiActions.LoginPage;
 public class TC003_NewUserSignUp extends TestBase{
 	
 	public static final Logger log=Logger.getLogger(TC001_VerifyLoginWithInvalidCredentials.class.getName());
-	
+	String url="http://automationpractice.com";
 	HomePage homepage;
 	LoginPage loginpage;
 	
 	@BeforeTest
 	public void setUp() {
-		init();
+		init(url);
 	}
 	
 	@Test

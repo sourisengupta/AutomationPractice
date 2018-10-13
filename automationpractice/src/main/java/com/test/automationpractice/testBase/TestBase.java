@@ -19,11 +19,14 @@ public class TestBase {
 	
 	public WebDriver driver;
 	
-	public void init() {
+	public void init(String url) {
 		selectBrowser(currentBrowser);
 		getURL(url);
 		String log4jConfPath="log4j.properties";
 		PropertyConfigurator.configure(log4jConfPath);
+	}
+	public void closeApp() {
+		driver.close();
 	}
 	
 	public void selectBrowser(String browser) {

@@ -12,7 +12,7 @@ import com.test.automationpractice.uiActions.LoginPage;
 
 
 public class TC001_VerifyLoginWithInvalidCredentials extends TestBase{	
-	
+	String url="http://automationpractice.com";
 	public static final Logger log=Logger.getLogger(TC001_VerifyLoginWithInvalidCredentials.class.getName());
 	
 	HomePage 	homepage;
@@ -20,7 +20,7 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase{
 	
 	@BeforeTest
 	public void setUp() {
-		init();
+		init(url);
 	}
 	
 	@Test
