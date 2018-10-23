@@ -44,9 +44,11 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 	
-	public void scrollToElement(WebElement xpath) {
-		WebElement element = driver.findElement(By.xpath(""));
-		((JavascriptExecutor)driver).executeScript("aguements[0].scrollIntoView(true);", element);
+	public void scrollToElement(WebElement element) throws InterruptedException {
+		Thread.sleep(200);
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	
+	public void scrollTo300() {
+		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,300)");
+	}
 }
