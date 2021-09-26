@@ -36,7 +36,7 @@ public class PLPTShirt {
 	@FindBy(xpath="//h5[@itemprop='name']")
 	WebElement xpath1stProdName;
 	
-	public void scrollTo1stProduct() {
+	public void scrollTo1stProduct() throws InterruptedException {
 		TestBase testbase = new TestBase();
 		testbase.scrollToElement(xpath1stProdName);
 	}

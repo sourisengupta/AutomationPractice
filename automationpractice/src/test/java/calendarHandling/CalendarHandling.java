@@ -20,8 +20,7 @@ public class CalendarHandling extends TestBase{
 	String url="https://www.seleniumeasy.com/test/bootstrap-date-picker-demo.html";
 	@BeforeTest
 	public void setUp() {
-		init(url);
-		
+		init(url);		
 	}
 	
 	@Test(priority=1)	
