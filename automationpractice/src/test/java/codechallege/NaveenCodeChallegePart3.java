@@ -73,8 +73,6 @@ public class NaveenCodeChallegePart3 {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='shopping_cart_badge']")));
 		
 		int cartNumber = Integer.parseInt(driver.findElement(By.xpath("//span[@class='shopping_cart_badge']")).getText()) ;
-		
-		
 		System.out.println(cartNumber);
 		if(cartNumber > 0) {
 			driver.findElement(By.xpath("//a[@class='shopping_cart_link']")).click();
@@ -82,16 +80,9 @@ public class NaveenCodeChallegePart3 {
 		else {
 			System.out.println("Cart is empty");
 		}
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='title']")));
-		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='title']")));		
 		
 		List<WebElement> cartItems = driver.findElements(By.xpath("//span[contains(text(),'Your Cart')]"));
 		assertTrue(cartItems.size()>0);
-		
-		
-		
-		
-		Thread.sleep(5000);
-				
 	}
 }
