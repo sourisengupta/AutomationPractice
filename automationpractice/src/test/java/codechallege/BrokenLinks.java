@@ -36,12 +36,8 @@ class BrokenLinks{
 			
 		}
 	}
+	
 	public static void verifyURL(String link) throws IOException {
-		RestAssured.given()
-		.when()
-		.then();
-	}
-	public static void verifyURLL(String link) throws IOException {
 		try {
 			URL url_link = new URL(link);
 		
