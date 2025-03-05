@@ -9,11 +9,10 @@ import base.BaseTest;
 import junit.framework.Assert;
 
 public class RetryFailedTests extends BaseTest{
-	
+	public static int count=0;
 	@BeforeClass
 	public void setUp() {
-		init("https://www.google.com");
-		
+		init("https://www.google.com");		
 	}
 	
 	@AfterClass
@@ -21,8 +20,9 @@ public class RetryFailedTests extends BaseTest{
 		tearDown();
 	}
 	
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void takeScreenshotTest() {
+		System.out.println("count:"+count++);
 		Assert.assertEquals(true, false);
 	}
 }
